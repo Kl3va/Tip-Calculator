@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono:400,500,700"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="logo" class="logo" />
+    </header>
+    <main class="container">
+      <section class="tip-calc">
+        <div class="inputs">
+          <label for="Bill" class="label-bill">Bill</label>
+          <input
+            type="number"
+            name="number"
+            class="bills bills--1"
+            placeholder="0"
+            oninput="checkLength(7,this)"
+            onblur="invalid(this)"
+            onfocus="valid(this)"
+          />
+        </div>
+
+        <div class="input-btns">
+          <label for="Tip" class="label-bill">Select Tip %</label>
+          <div class="btns">
+            <button class="btn" value="5">5%</button>
+            <button class="btn" value="10">10%</button>
+            <button class="btn" value="15">15%</button>
+            <button class="btn" value="25">25%</button>
+            <button class="btn" value="50">50%</button>
+            <input
+              type="number"
+              name="number"
+              class="custom"
+              placeholder="custom"
+              maxlength="2"
+              oninput="checkLength(2,this)"
+              onblur="invalid(this)"
+              onfocus="valid(this)"
+            />
+          </div>
+        </div>
+
+        <div class="input-person">
+          <label for="people" class="label-bill">Number of People</label>
+          <p class="error-message"></p>
+          <input
+            type="number"
+            name="number"
+            class="bills bills--2"
+            placeholder="0"
+            oninput="checkLength(2,this)"
+            onblur="invalid(this)"
+            onfocus="valid(this)"
+          />
+        </div>
+      </section>
+
+      <section class="tip-result">
+        <div class="tip-amount">
+          <p class="tip-amount__text">
+            Tip Amount<br /><span class="faint">/ person</span>
+          </p>
+          <p class="tip-amount__value tip-value">$0.00</p>
+        </div>
+
+        <div class="tip-amount total">
+          <p class="tip-amount__text">
+            Total<br /><span class="faint">/ person</span>
+          </p>
+          <p class="tip-amount__value total-value">$0.00</p>
+        </div>
+        <button class="btn-reset">RESET</button>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kl3va</a>.
+    </footer>
+  </body>
+</html>
