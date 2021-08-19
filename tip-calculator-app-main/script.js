@@ -60,9 +60,7 @@ btns.addEventListener('click', function (e) {
     if (persons <= 0 || persons > 20) {
       // numberOfPeople.classList.add('bills-color');
       // invalid(numberOfPeople);
-      errorMessage.textContent = `Can't be ${
-        persons <= 0 ? persons : `more than 20`
-      }`;
+      errorMessage.textContent = `Can't be ${persons <= 0 ? persons : `> 20`}`;
     } else {
       errorMessage.textContent = '';
       // numberOfPeople.classList.remove('bills-color');
